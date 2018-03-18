@@ -1,0 +1,84 @@
+
+
+        $("#tab4_div").click(function() {
+            if ($("#ch4").is(':checked')) {
+                $('.ch4').prop('checked', false);
+                $(".select_city").css({
+                    "right": "8.4%"
+                })
+                $('.ch4').change()
+            } else {
+                $('.ch4').prop('checked', true);
+                $(".select_city").css({
+                    "right": "93%"
+                })
+                $('.ch4').change()
+            }
+
+
+        });
+
+
+
+        $("#tab3_div").click(function() {
+
+
+
+            if ($("#tab3_div")[0].style.right != "") {
+                $('#ch2').prop('checked', false);
+                $('.ch4').prop('checked', false);
+
+
+                $(".buy_settings").css({
+                    "right": "8.4%"
+                })
+                $('#ch2').change()
+                $("#tab4").css({
+                    "right": "98%"
+                })
+
+
+            } else {
+                $('.ch4').prop('checked', true);
+                $('.ch3').prop('checked', true);
+                $(".select_city").css({
+                    "right": "93%"
+                })
+
+
+                $('.ch3').change()
+
+            }
+
+
+
+
+
+
+        });
+
+        $("#tab2_div").click(function() {
+            if ($("#ch2").is(':checked')) {
+                $('.ch2').prop('checked', false);
+                $(".select_city").css({
+                    "right": "8.4%"
+                })
+                $(".buy_settings").css({
+                    "right": "8.4%"
+                })
+                $('.ch2').change()
+            } else {
+                $('.ch2').prop('checked', true);
+                $('.ch3').prop('checked', true);
+
+                $(".buy_settings").css({
+                    "right": "93%"
+                })
+                $(".select_city").css({
+                    "right": "93%"
+                })
+                $('.ch2').change()
+            }
+
+
+        });

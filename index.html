@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>میوه فروشی آنلاین</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="shelf.css">
+
+    <meta charset="utf-8">
+    <style type="text/css">
+
+.lightrope {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: -15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.lightrope li {
+  position: relative;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: #00f7a5;
+  -webkit-box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+          box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  -webkit-animation-name: flash-1;
+          animation-name: flash-1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.lightrope li:nth-child(2n+1) {
+  background: cyan;
+  -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
+          box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
+  -webkit-animation-name: flash-2;
+          animation-name: flash-2;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+.lightrope li:nth-child(4n+2) {
+  background: #f70094;
+  -webkit-box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+          box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  -webkit-animation-name: flash-3;
+          animation-name: flash-3;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+}
+.lightrope li:nth-child(odd) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+.lightrope li:nth-child(3n+1) {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+.lightrope li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9.3333333333px;
+  border-radius: 3px;
+  top: -4.6666666667px;
+  left: 1px;
+}
+.lightrope li:after {
+  content: "";
+  top: -14px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 18.6666666667px;
+  border-bottom: solid #222 2px;
+  border-radius: 50%;
+}
+.lightrope li:last-child:after {
+  content: none;
+}
+.lightrope li:first-child {
+  margin-left: -40px;
+}
+
+@-webkit-keyframes flash-1 {
+  0%, 100% {
+    background: #00f7a5;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+            box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  }
+  50% {
+    background: rgba(0, 247, 165, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+  }
+}
+
+@keyframes flash-1 {
+  0%, 100% {
+    background: #00f7a5;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+            box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  }
+  50% {
+    background: rgba(0, 247, 165, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+  }
+}
+@-webkit-keyframes flash-2 {
+  0%, 100% {
+    background: cyan;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px cyan;
+            box-shadow: 0px 4.6666666667px 24px 3px cyan;
+  }
+  50% {
+    background: rgba(0, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  }
+}
+@keyframes flash-2 {
+  0%, 100% {
+    background: cyan;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px cyan;
+            box-shadow: 0px 4.6666666667px 24px 3px cyan;
+  }
+  50% {
+    background: rgba(0, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  }
+}
+@-webkit-keyframes flash-3 {
+  0%, 100% {
+    background: #f70094;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+            box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  }
+  50% {
+    background: rgba(247, 0, 148, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  }
+}
+@keyframes flash-3 {
+  0%, 100% {
+    background: #f70094;
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+            box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  }
+  50% {
+    background: rgba(247, 0, 148, 0.4);
+    -webkit-box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+            box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  }
+}
+
+    	.fruit{
+opacity:1.0;
+    position: relative;
+}
+
+.fruit:hover{
+	width: 158px !important;
+
+}
+.fruit_label{
+        border-style: ridge;
+    border-width: 1px;
+    background: #e7e9ea;
+    color: #1f2322;
+    margin-bottom: 104px;
+    border-color: #e8e8e8;
+
+}
+.fruit_stand{
+
+   transform: rotate(90deg);
+    border-style: ridge;
+    border-width: 1px;
+    width: 95px;
+    position: relative;
+    margin-bottom: -100px;
+    margin-left: 21px;
+    border-color: #c1c3bc;
+    bottom: 45px;
+
+}
+
+#original{
+	color:red;
+}
+
+#fake{
+	    cursor: pointer;
+text-decoration:line-through;
+margin-bottom: -26px;
+margin-top: -20px;
+}
+#pay{
+
+    margin-bottom: -26px;
+    columns: 3;
+    background: #e8eaeb;
+    margin-left: -1px;
+    margin-right: -1px;
+
+}
+
+#add_apple{
+	    cursor: pointer;
+}
+
+#remove_apple{
+	    cursor: pointer;
+}
+#add_orange{
+	    cursor: pointer;
+}
+
+#remove_orange{
+	    cursor: pointer;
+}
+#add_lemon{
+	    cursor: pointer;
+}
+
+#remove_lemon{
+	    cursor: pointer;
+}
+#add_banana{
+	    cursor: pointer;
+}
+
+#remove_banana{
+	    cursor: pointer;
+}
+
+
+
+#add_many_apple{
+	    cursor: pointer;
+}
+
+#remove_many_apple{
+	    cursor: pointer;
+}
+#add_many_orange{
+	    cursor: pointer;
+}
+
+#remove_many_orange{
+	    cursor: pointer;
+}
+#add_many_lemon{
+	    cursor: pointer;
+}
+
+#remove_many_lemon{
+	    cursor: pointer;
+}
+#add_many_banana{
+	    cursor: pointer;
+}
+
+#remove_many_banana{
+	    cursor: pointer;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="tab0">
+
+
+
+    </div>
+    <div id="tab1">
+        <input type="checkbox" class="ch1" id="ch1">
+        <div class="tab1_text">
+            <span>تایید نهایی</span>
+        </div>
+        <div class="content">
+            <center>
+                <h1 id="final_text" style="color: #342d2c;
+    text-shadow: 0px 1px 0px #37424d;">تایید نهایی</h1>
+
+
+<div id="tracking"  style="display:none;">
+
+<ul class="timeline" id="timeline">
+  
+  <li class="li complete">
+    <div class="timestamp">
+      <span class="author">جمع آوری از انبار</span>
+      <!--<span class="date">11/15/2014<span>-->
+    </div>
+    <div class="status">
+      <h4> انجام شد </h4>
+    </div>
+  </li>
+  
+  <li class="li">
+    <div class="timestamp">
+      <span class="author">بسته بندی</span>
+      <!--<span class="date">11/15/2014<span>-->
+    </div>
+    <div class="status">
+      <h4> در حال بررسی </h4>
+    </div>
+  </li>
+  <li class="li">
+    <div class="timestamp">
+      <span class="author">تحویل واحد حمل و نقل</span>
+      <!--<span class="date">11/15/2014<span>-->
+    </div>
+    <div class="status">
+      <h4> نا تمام </h4>
+    </div>
+  </li>
+  <li class="li">
+    <div class="timestamp">
+      <span class="author">میوه ها رسید؟</span>
+     <!--<span class="date">11/15/2014<span>-->
+    </div>
+    <div class="status">
+      <h4> نا تمام </h4>
+    </div>
+  </li>
+ </ul>   
+
+
+</div>
+
+<div id="checkout">
+
+
+
+
+	<div class="page">
+	<table id="all_price" class="layout display responsive-table">
+	    <thead>
+	        <tr>
+	            <th>شماره</th>
+	            <th colspan="2">نام محصول</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+
+	       
+
+	    </tbody>
+	</table>
+	</div>
+
+
+
+
+
+
+	<section class="cards">
+	    <div style="display:none;" class="card card--oil2">
+	        <div class="card__svg-container">
+	            <div class="card__svg-wrapper">
+	                <img src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/small_truck.png" width="60%">
+	            </div>
+	        </div>
+	        <div class="card__count-container">
+	            <div class="card__count-text">
+	                <span class="card__count-text--big">همان روز</span> 
+	            </div>
+	        </div>
+	        <div class="card__stuff-container">
+	            <div class="card__stuff-text"> ۲۰۰۰۰ هزار تومان</div>
+	        </div>
+	    </div>
+
+	    <div style="display:none;" class="card card--oil">
+	        <div class="card__svg-container">
+	            <div class="card__svg-wrapper">
+	                <img src="https://lh3.googleusercontent.com/kY5fvg65sbpFsLLY1J4xxvqjNMzd9DTV3tUz5arCbQLsTVkVrNcI06NjYCB8fkKmcJE=w300" width="60%">
+	            </div>
+	        </div>
+	        <div class="card__count-container">
+	            <div class="card__count-text">
+	                <span class="card__count-text--big">بین ۱ تا ۲ روز</span> 
+	            </div>
+	        </div>
+	        <div class="card__stuff-container">
+	            <div class="card__stuff-text"> ۳۰۰۰۰ هزار تومان</div>
+	        </div>
+	    </div>
+
+
+	    <div class="card card--tree">
+	        <div class="card__svg-container">
+	            <div class="card__svg-wrapper">
+	                 <img src="https://alopeyk.com/assets/img/og.png" width="60%">
+	            </div>
+	        </div>
+	        <div class="card__count-container">
+	            <div class="card__count-text">
+	                <span class="card__count-text--big">بین ۱ تا ۳ ساعت</span>
+	            </div>
+	        </div>
+	        <div class="card__stuff-container">
+	            <div class="card__stuff-text"> ۲۰۰۰ هزار تومان</div>
+	        </div>
+	    </div>
+	    <div class="card card--water">
+	        <div class="card__svg-container">
+	            <div class="card__svg-wrapper">
+	               
+	                <img src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/motor_scooter.png" width="60%">
+	            </div>
+	        </div>
+	        <div class="card__count-container">
+	            <div class="card__count-text">
+	                <span class="card__count-text--big">کم ترین زمان ممکن</span>
+	            </div>
+	        </div>
+	        <div class="card__stuff-container">
+	            <div class="card__stuff-text"> رایگان</div>
+	        </div>
+	    </div>
+	</section>
+<button>
+  <p>تایید</p>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+    <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path> 
+  </svg>
+</button>
+</div>
+
+
+
+            </center>
+        </div>
+    </div>
+    <div id="tab2">
+        <input type="checkbox" class="ch2" id="ch2">
+        <div class="tab2_text">
+            <span>انتخاب محصولات</span>
+        </div>
+        <div class="content">
+        <ul class="lightrope">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+            <center>
+            <br><br>
+                <h1>لطفا محصولات مورد نظر خود را انتخاب کنید</h1>
+
+                <section style="display:none;" class="shop  js-shop">
+                </section>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="one">
+<section class="shelf">
+	
+ <div>
+    <!-- apple -->
+    <article class="bluray case">
+
+      <div>
+        <div class="logo fruit_label">
+        <div>
+        	سیب سبز
+        </div>
+   <div  id="fake">
+        ۷۵۰ کیلویی</div>
+<br>
+<div id="original">
+	۷۰۰ کیلویی
+</div>
+<div id="pay">
+	<div id="add_apple">+</div>
+	<div id="pay_apple">0</div>
+	<div id="remove_apple">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/5/Green-Apple-PNG-Transparent-349x279.png"></span>
+        </div>
+      </div>
+    </article>
+ <!-- orange -->
+    <article class="bluray case">
+
+      <div>
+
+        <div class="logo fruit_label">
+          <div>
+        	پرتقال تامسون جنوب
+        </div>
+   <div  id="fake">
+        ۳۵۰۰ کیلویی</div>
+<br>
+<div id="original">
+	۳۰۰۰ کیلویی
+</div>
+<div id="pay">
+	<div id="add_orange">+</div>
+	<div id="pay_orange">0</div>
+	<div id="remove_orange">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img style="width: 125% !important;
+    right: 18px;" class="fruit" src="http://www.pngmart.com/files/1/Orange-PNG-Transparent-Image.png"></span>
+        </div>
+      </div>
+    </article>
+
+
+     <!-- lemon -->
+    <article class="bluray case">
+
+      <div>
+  
+        <div class="logo fruit_label">
+            <div>
+        	لیمو شیرین درجه ۱
+        </div>
+   <div  id="fake">
+        ۲۶۰۰ کیلویی</div>
+<br>
+<div id="original">
+	۲۱۰۰ کیلویی
+</div>
+<div id="pay">
+	<div id="add_lemon">+</div>
+	<div id="pay_lemon">0</div>
+	<div id="remove_lemon">-</div>
+</div>
+        
+        </div>
+        <div style="margin-bottom: -78px !important;" class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/1/Lemon-PNG-HD-420x250.png"></span>
+        </div>
+      </div>
+    </article>
+
+
+     <!-- banana -->
+    <article class="bluray case">
+
+      <div>
+      
+        <div class="logo fruit_label">
+        <div>
+        	موز سایز ۷ تا ۹
+        </div>
+   <div  id="fake">
+        ۳۳۵۰۰ کیلویی</div>
+<br>
+<div id="original">
+	۳۰۵۰۰ کیلویی
+</div>
+<div id="pay">
+	<div id="add_banana">+</div>
+	<div id="pay_banana">0</div>
+	<div id="remove_banana">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/1/Banana-PNG-411x279.png"></span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+</div>
+
+
+
+
+
+
+<div id="many">
+
+
+<section class="shelf">
+	
+ <div>
+      <!-- apple -->
+    <article class="bluray case">
+
+      <div>
+        <div class="logo fruit_label">
+                <div>
+        	سیب سبز
+        </div>
+   <div  id="fake">
+        ۸۶۰۰ جعبه ای</div>
+<br>
+<div id="original">
+	۸۵۰۰ جعبه ای
+</div>
+<div id="pay">
+	<div id="add_many_apple">+</div>
+	<div id="pay_many_apple">0</div>
+	<div id="remove_many_apple">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/5/Green-Apple-PNG-Transparent-349x279.png"></span>
+        </div>
+      </div>
+    </article>
+  <!-- orange -->
+    <article class="bluray case">
+
+      <div>
+        <div class="logo fruit_label">
+                <div>
+        	پرتقال تامسون جنوب
+        </div>
+   <div  id="fake">
+        ۸۶۰۰ جعبه ای</div>
+<br>
+<div id="original">
+	۸۵۰۰ جعبه ای
+</div>
+<div id="pay">
+	<div id="add_many_orange">+</div>
+	<div id="pay_many_orange">0</div>
+	<div id="remove_many_orange">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img style="width: 125% !important;
+    right: 18px;" class="fruit" src="http://www.pngmart.com/files/1/Orange-PNG-Transparent-Image.png"></span>
+        </div>
+      </div>
+    </article>
+
+
+     <!-- lemon -->
+    <article class="bluray case">
+
+      <div>
+        <div class="logo fruit_label">
+                <div>
+        	لیمو شیرین درجه ۱
+        </div>
+   <div  id="fake">
+        ۸۶۰۰ جعبه ای</div>
+<br>
+<div id="original">
+	۸۵۰۰ جعبه ای
+</div>
+<div id="pay">
+	<div id="add_many_lemon">+</div>
+	<div id="pay_many_lemon">0</div>
+	<div id="remove_many_lemon">-</div>
+</div>
+        
+        </div>
+        <div style="margin-bottom: -78px !important;" class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/1/Lemon-PNG-HD-420x250.png"></span>
+        </div>
+      </div>
+    </article>
+
+
+     <!-- banana -->
+    <article class="bluray case">
+
+      <div>
+        <div class="logo fruit_label">
+                <div>
+        	موز سایز ۷ تا ۹
+        </div>
+   <div  id="fake">
+        ۸۶۰۰ جعبه ای</div>
+<br>
+<div id="original">
+	۸۵۰۰ جعبه ای
+</div>
+<div id="pay">
+	<div id="add_many_banana">+</div>
+	<div id="pay_many_banana">0</div>
+	<div id="remove_many_banana">-</div>
+</div>
+        
+        </div>
+        <div class="logo fruit_stand">-</div>
+
+        <div class="img">
+          <span><img class="fruit" src="http://www.pngmart.com/files/1/Banana-PNG-411x279.png"></span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </center>
+        </div>
+
+    </div>
+    <div id="tab3">
+        <input type="checkbox" class="ch3" id="ch3">
+        <div class="tab3_text">
+            <span>نوع خرید</span>
+        </div>
+        <div class="content">
+            <center>
+                <h1>لطفا نوع خرید خود را انتخاب کنید</h1>
+
+                <figure id="many-to-many" class="snip1560">
+                    <img style="filter: blur(2px);" src="http://klankosova.tv/wp-content/uploads/2017/12/How-to-store-fruit-to-keep-it-fresh-resized.jpg" alt="pr-sample23" />
+                    <figcaption>
+                        <h3>
+                            <span style="
+			border-style: solid;
+			border-color: #e1ba58;
+			background: #ded3d469;
+			text-shadow: 1px 1px 1px #0000006e;
+			/* opacity: 0.5; */
+	">خرید عمده</span>
+                        </h3>
+                    </figcaption>
+                    <a href="#" class="link"></a>
+                </figure>
+                <figure id="one-to-one" class="snip1560"><img style="filter: blur(2px);" src="http://sciencenordic.com/sites/default/files/imagecache/620x/frukt.jpg" alt="pr-sample24" />
+                    <figcaption>
+                        <h3><span style="
+			border-style: solid;
+			border-color: #e1ba58;
+			background: #ded3d469;
+			text-shadow: 1px 1px 1px #0000006e;
+			/* opacity: 0.5; */
+	">خرید خرده</span></h3>
+                    </figcaption>
+                    <a href="#" class="link"></a>
+                </figure>
+
+
+            </center>
+        </div>
+    </div>
+    <div id="tab4">
+        <div class="tab4_text">
+            <span>انتخاب شهر</span>
+        </div>
+        <input type="checkbox" class="ch4" id="ch4">
+
+        <div class="content">
+
+<div class="tree-lights left">
+						<div class="light-bulb red"></div>
+						<div class="light-bulb yew"></div>
+						<div class="light-bulb purple"></div>
+						<div class="light-bulb blue"></div>
+					</div>
+					<div class="tree-lights right">
+						<div class="light-bulb red"></div>
+						<div class="light-bulb yew"></div>
+						<div class="light-bulb purple"></div>
+						<div class="light-bulb blue"></div>
+					</div>
+
+
+            <center>
+
+                <h1>لطفا استان مورد نظر خود را انتخاب کنید</h1>
+                <div id="googleMap" style="width:85%;height:659px;"></div>
+
+            </center>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
+
+    <script type="text/javascript">
+// sleep time expects milliseconds
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+    $('button').click(function() {
+    	// Usage!
+sleep(1500).then(() => {
+    
+    	$("#checkout").hide()
+    $("#tracking").show()
+    $("#final_text").text("مراحل تا تحویل میوه شما")
+});
+
+  $(this).toggleClass('clicked');
+  $('button p').text(function(i, text) {
+    return text === "تایید شد!" ? "تایید" : "تایید شد!";
+  });
+});
+
+        var marker;
+
+        var map
+
+        var faisalabad = {
+            lat: 31.4181,
+            lng: 73.0776
+        };
+
+        function addYourLocationButton(map, marker) {
+            var controlDiv = document.createElement('div');
+
+            var firstChild = document.createElement('button');
+            firstChild.style.backgroundColor = '#fff';
+            firstChild.style.border = 'none';
+            firstChild.style.outline = 'none';
+            firstChild.style.width = '28px';
+            firstChild.style.height = '28px';
+            firstChild.style.borderRadius = '2px';
+            firstChild.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+            firstChild.style.cursor = 'pointer';
+            firstChild.style.marginRight = '10px';
+            firstChild.style.padding = '0px';
+            firstChild.title = 'Your Location';
+            controlDiv.appendChild(firstChild);
+
+            var secondChild = document.createElement('div');
+            secondChild.style.margin = '5px';
+            secondChild.style.width = '18px';
+            secondChild.style.height = '18px';
+            secondChild.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
+            secondChild.style.backgroundSize = '180px 18px';
+            secondChild.style.backgroundPosition = '0px 0px';
+            secondChild.style.backgroundRepeat = 'no-repeat';
+            secondChild.id = 'you_location_img';
+            firstChild.appendChild(secondChild);
+
+            google.maps.event.addListener(map, 'dragend', function() {
+                $('#you_location_img').css('background-position', '0px 0px');
+            });
+
+            firstChild.addEventListener('click', function() {
+                var imgX = '0';
+                var animationInterval = setInterval(function() {
+                    if (imgX == '-18') imgX = '0';
+                    else imgX = '-18';
+                    $('#you_location_img').css('background-position', imgX + 'px 0px');
+                }, 500);
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        Cookies.set('lat', position.coords.latitude);
+                        Cookies.set('lng', position.coords.longitude);
+                        var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                        //marker.setPosition(latlng);
+                        map.setCenter(latlng);
+                        map.setZoom(15);
+
+                        clearInterval(animationInterval);
+
+
+                        console.log(marker)
+                        $('#you_location_img').css('background-position', '-144px 0px');
+                    });
+                } else {
+                    clearInterval(animationInterval);
+                    $('#you_location_img').css('background-position', '0px 0px');
+                }
+            });
+
+            controlDiv.index = 1;
+            map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
+        }
+
+
+
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(32.9934324, 53.3092623),
+                zoom: 6,
+
+            };
+            map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            google.maps.event.addListener(map, 'click', function(event) {
+                placeMarker(event.latLng, event.latLng.lat(), event.latLng.lng());
+
+            });
+            var myMarker = new google.maps.Marker({
+                map: map,
+                animation: google.maps.Animation.DROP,
+                position: faisalabad
+            });
+            addYourLocationButton(map, myMarker);
+        }
+
+
+        function placeMarker(location, lat, lng) {
+            Cookies.set('lat', lat);
+            Cookies.set('lng', lng);
+            if (marker) {
+
+                marker.setPosition(location);
+
+                $('#ch3').prop('checked', true);
+                $('#ch3').change()
+            } else {
+
+                $('#ch3').prop('checked', true);
+                $('#ch3').change()
+                marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        }
+
+
+
+        /* checkbox click */
+        $('#ch4').change(
+            function() {
+                if ($("#ch1").is(':checked') || $("#ch2").is(':checked') || $("#ch3").is(':checked')) {
+                    if (this.checked) {
+                        $("#tab4").css({
+                            "right": "20.4%"
+                        })
+                    } else {
+                        $("#tab4").css({
+                            "right": "98%"
+                        })
+                    }
+                } else {
+                    if (this.checked) {
+
+
+                        $("#tab4").css({
+                            "right": "98%"
+                        })
+                    } else {
+
+                        $("#tab4").css({
+                            "right": "20.4%"
+                        })
+                    }
+                }
+            });
+
+
+
+        $('#ch3').change(
+            function() {
+                if ($("#ch1").is(':checked') || $("#ch2").is(':checked')) {
+                    if (this.checked) {
+                        $("#tab3").css({
+                            "right": "15.4%"
+                        })
+                    } else {
+                        $("#tab3").css({
+                            "right": "98%"
+                        })
+                    }
+                } else {
+                    if (this.checked) {
+                        $('#ch4').prop('checked', true);
+
+
+                        $("#tab4").css({
+                            "right": "98%"
+                        })
+                    } else {
+                        $('#ch4').prop('checked', false);
+                        $("#tab4").css({
+                            "right": "20.4%"
+                        })
+                    }
+                }
+            });
+
+        $('#ch2').change(
+            function() {
+            	if(Cookies.get("buy_settings")==1){
+            		$("#one").hide()
+
+            	}else{
+$("#many").hide()
+            	}
+                if ($("#ch1").is(':checked')) {
+
+
+                    if (this.checked) {
+
+                        $("#tab2").css({
+                            "right": "10.4%"
+                        })
+
+                    } else {
+                        $("#tab2").css({
+                            "right": "97%"
+                        })
+
+                    }
+                } else {
+
+
+                    if (this.checked) {
+
+
+
+                        $("#tab4").css({
+                            "right": "98%"
+                        })
+                        $("#tab3").css({
+                            "right": "98%"
+                        })
+
+
+
+
+                    } else {
+                        $("#tab3").css({
+                            "right": "15.4%"
+                        })
+                        $("#tab4").css({
+                            "right": "20.4%"
+                        })
+
+                    }
+
+
+                }
+
+            });
+
+        $('#ch1').change(
+            function() {
+
+
+var buy_s = Cookies.get("buy_settings")
+        	if(buy_s==1){
+        		$('.card--water').hide()
+        		$('.card--tree').hide()
+        		$('.card--oil').show()
+        		$('.card--oil2').show()
+        	}
+
+
+// all fruit price
+
+
+
+
+var i="0";
+var apple = $('#pay_apple').text()
+Cookies.set('apple', apple);
+var orange = $('#pay_orange').text()
+Cookies.set('orange', orange);
+var lemon = $('#pay_lemon').text()
+Cookies.set('lemon', lemon);
+var banana = $('#pay_banana').text()
+Cookies.set('banana', banana);
+$("#all_price tr").remove();
+
+if(apple!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">سیب سبز</td><td class="organisationnumber">'+ apple +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+
+}if(orange!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">پرتغال</td><td class="organisationnumber">'+ orange +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}if(lemon!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">لیمو شیرین</td><td class="organisationnumber">'+ lemon +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}if(banana!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">موز</td><td class="organisationnumber">'+ banana +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}
+
+
+var many_apple = $('#pay_many_apple').text()
+Cookies.set('apple', many_apple);
+var many_orange = $('#pay_many_orange').text()
+Cookies.set('orange', many_orange);
+var many_lemon = $('#pay_many_lemon').text()
+Cookies.set('lemon', many_lemon);
+var many_banana = $('#pay_many_banana').text()
+Cookies.set('banana', many_banana);
+$("#all_price tr").remove();
+
+if(many_apple!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">سیب سبز</td><td class="organisationnumber">'+ many_apple +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+
+}if(many_orange!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">پرتغال</td><td class="organisationnumber">'+ many_orange +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}if(many_lemon!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">لیمو شیرین</td><td class="organisationnumber">'+ many_lemon +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}if(many_banana!=0){
+	i++;
+	$('#all_price > tbody:last-child').append('<tr><td class="organisationnumber">'+ i +'</td><td class="organisationname">موز</td><td class="organisationnumber">'+ many_banana +'</td><td class="actions"><a href="?" class="remove-item" title="Remove">پاک شود</a></td></tr>');
+}
+
+
+
+
+
+
+// end all fruit price
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                if (this.checked) {
+                    $('.ch2').prop('checked', false);
+                    $('.ch3').prop('checked', false);
+                    $('.ch4').prop('checked', false);
+
+                    $("#tab4").css({
+                        "right": "98%"
+                    })
+                    $("#tab3").css({
+                        "right": "97%"
+                    })
+                    $("#tab2").css({
+                        "right": "95%"
+                    })
+
+
+                } else {
+
+                    $("#tab2").css({
+                        "right": "10.4%"
+                    })
+                    $("#tab3").css({
+                        "right": "15.4%"
+                    })
+                    $("#tab4").css({
+                        "right": "18.4%"
+                    })
+                }
+            });
+
+
+        /**/
+
+
+
+
+
+
+
+        /* buy settings */
+        $("#one-to-one").click(function() {
+        	Cookies.set("buy_settings","0")
+            if ($("#ch2").is(':checked')) {
+                $('.ch2').prop('checked', false);
+
+                $('.ch2').change()
+            } else {
+                Cookies.set("buy_settings", "0")
+                $('#ch2').prop('checked', true);
+
+                $('#ch2').change()
+            }
+
+        });
+        $("#many-to-many").click(function() {
+        	Cookies.set("buy_settings","1")
+            if ($("#ch2").is(':checked')) {
+                $('.ch2').prop('checked', false);
+
+                $('.ch2').change()
+            } else {
+                Cookies.set("buy_settings", "1")
+                $('#ch2').prop('checked', true);
+
+                $('#ch2').change()
+            }
+        });
+
+        /* end */
+
+        $(document).ready(function() {
+        	
+
+//we
+$('.card--water').click(function(e) {  
+	$(".card--tree").css("background-color", "#f9fbfb");
+	$(".card--water").css("background-color", "yellow");
+    Cookies.set("delivery","0")
+});
+//alowpeyk
+$('.card--tree').click(function(e) {  
+	
+	$(".card--tree").css("background-color", "yellow");
+	$(".card--water").css("background-color", "#f9fbfb");
+   Cookies.set("delivery","1")
+});
+//we_
+$('.card--oil2').click(function(e) {  
+	
+	$(".card--oil2").css("background-color", "yellow");
+	$(".card--oil").css("background-color", "#f9fbfb");
+   Cookies.set("delivery","2")
+});
+//barko
+$('.card--oil').click(function(e) {  
+	
+	$(".card--oil").css("background-color", "yellow");
+	$(".card--oil2").css("background-color", "#f9fbfb");
+   Cookies.set("delivery","3")
+});
+
+
+
+
+var apple_price = 4500;
+var orange_price = 4500;
+var lemon_price = 4500;
+var banana_price = 4500;
+
+var many_apple_price = 8500;
+var many_orange_price = 8500;
+var many_lemon_price = 8500;
+var many_banana_price = 8500;
+
+/* add fruit */
+//apple
+    $('#add_apple').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_apple').text());
+
+
+        $('#pay_apple').text(number+apple_price/2);
+
+    });
+	$('#remove_apple').click(function(e) {  
+	        var number = parseInt($('#pay_apple').text());
+
+
+            $('#pay_apple').text(number-apple_price/2);
+	    });
+
+//orange
+	$('#add_orange').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_orange').text());
+
+
+        $('#pay_orange').text(number+orange_price/2);
+
+    });
+	$('#remove_orange').click(function(e) {  
+	        var number = parseInt($('#pay_orange').text());
+
+
+            $('#pay_orange').text(number-orange_price/2);
+	    });
+//lemon
+	$('#add_lemon').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_lemon').text());
+
+
+        $('#pay_lemon').text(number+lemon_price/2);
+
+    });
+	$('#remove_lemon').click(function(e) {  
+	        var number = parseInt($('#pay_lemon').text());
+
+
+            $('#pay_lemon').text(number-lemon_price/2);
+	    });
+//banana
+	$('#add_banana').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_banana').text());
+
+
+        $('#pay_banana').text(number+banana_price/2);
+
+    });
+	$('#remove_banana').click(function(e) {  
+	        var number = parseInt($('#pay_banana').text());
+
+
+            $('#pay_banana').text(number-banana_price/2);
+	    });
+
+
+
+	//many
+
+
+
+
+
+	//apple
+    $('#add_many_apple').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_many_apple').text());
+
+
+        $('#pay_many_apple').text(number+many_apple_price);
+
+    });
+	$('#remove_many_apple').click(function(e) {  
+	        var number = parseInt($('#pay_many_apple').text());
+
+
+            $('#pay_many_apple').text(number-many_apple_price);
+	    });
+
+//orange
+	$('#add_many_orange').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_many_orange').text());
+
+
+        $('#pay_many_orange').text(number+many_orange_price);
+
+    });
+	$('#remove_many_orange').click(function(e) {  
+	        var number = parseInt($('#pay_orange').text());
+
+
+            $('#pay_orange').text(number-orange_price);
+	    });
+//lemon
+	$('#add_many_lemon').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_many_lemon').text());
+
+
+        $('#pay_many_lemon').text(number+many_lemon_price);
+
+    });
+	$('#remove_many_lemon').click(function(e) {  
+	        var number = parseInt($('#pay_many_lemon').text());
+
+
+            $('#pay_many_lemon').text(number-many_lemon_price);
+	    });
+//banana
+	$('#add_many_banana').click(function(e) {  
+    	
+    	var number = parseInt($('#pay_many_banana').text());
+
+
+        $('#pay_many_banana').text(number+many_banana_price);
+
+    });
+	$('#remove_many_banana').click(function(e) {  
+	        var number = parseInt($('#pay_many_banana').text());
+
+
+            $('#pay_many_banana').text(number-many_banana_price);
+	    });
+
+
+
+
+/* end add fruit */
+
+
+
+
+
+
+
+
+
+
+
+
+            var $button = document.querySelector('.button');
+            $button.addEventListener('click', function() {
+                var duration = 0.3,
+                    delay = 0.08;
+                TweenMax.to($button, duration, {
+                    scaleY: 1.6,
+                    ease: Expo.easeOut
+                });
+                TweenMax.to($button, duration, {
+                    scaleX: 1.2,
+                    scaleY: 1,
+                    ease: Back.easeOut,
+                    easeParams: [3],
+                    delay: delay
+                });
+                TweenMax.to($button, duration * 1.25, {
+                    scaleX: 1,
+                    scaleY: 1,
+                    ease: Back.easeOut,
+                    easeParams: [6],
+                    delay: delay * 3
+                });
+            });
+
+
+
+            /* Demo purposes only */
+            $(".hover").mouseleave(
+                function() {
+                    $(this).removeClass("hover");
+                }
+            );
+
+
+
+
+
+
+
+
+
+
+        });
+
+
+
+
+/*
+ * Make sure to read this from the bottom up to see what's going on.
+*/
+
+function Item(name, description, price, photo) {
+  // Make sure that the object is accessible from at any scope inside it
+  var _this = this;
+
+  (function init() {
+    // Initialise Item object, probably from JSON file
+    _this.name = name;
+    _this.description = description;
+    _this.price = price;
+    _this.photo = photo;
+    // Count and cost start off at 0
+    _this.count = 0;
+    _this.cost = 0;
+    // Have the wrapper, which is the node for this item
+    _this.wrapper = null;
+    // Their values will need to change, so keep track of them here
+    _this.countView = null;
+    _this.costView = null;
+    _this.countHidden = null;
+    _this.costHidden = null;
+  })();
+}
+
+  // Update the visible and hidden fields for count and cost
+Item.prototype.update = function() {
+  var _this = this;
+  _this.costView.textContent = poundify(_this.cost);
+  _this.countView.textContent = _this.count;
+  _this.costHidden.value = _this.cost;
+  _this.countHidden.value = _this.count;
+};
+
+Item.prototype.addItem = function(e) {
+  var _this = this;
+  // Prevent button from submitting the form
+  e.preventDefault();
+  // Add to the count and price
+  _this.count++;
+  _this.cost += _this.price;
+  // Update the item's markup
+  _this.update();
+};
+
+Item.prototype.removeItem = function(e) {
+  var _this = this;
+  // Prevent button from submitting the form
+  e.preventDefault();
+  // Do not allow count/cost to go negative
+  if (_this.count > 0) {
+    // Subtract from the count and price
+    _this.count--;
+    _this.cost -= _this.price;
+    // Update the item's markup
+    _this.update();
+  }
+};
+
+// Prints the item to a container
+// It's a big function with lots of similar code, but no logic.
+// Counter is used for creating PHP POST variable
+Item.prototype.print = function(container, counter) {
+  var _this = this;
+  // Create all elements that will make up the HTML element
+  _this.wrapper = document.createElement("article");
+  //var header = document.createElement("header");
+  var name = document.createElement("h2");
+  var nameHidden = document.createElement("input");
+
+  var img = document.createElement("img");
+  var desc = document.createElement("p");
+
+  var moneyContainer = document.createElement("div");
+  var price = document.createElement("span");
+  _this.costView = document.createElement("span");
+  var countContainer = document.createElement("div");
+  var remove = document.createElement("button");
+  _this.countView = document.createElement("span");
+  var add = document.createElement("button");
+  // Add hidden inputs that will post their data with the form
+  _this.countHidden = document.createElement("input");
+  _this.costHidden = document.createElement("input");
+
+  // Using BEM for Object Oriented styling/markup
+  _this.wrapper.classList.add("item");
+
+  // Give the item a name and append the name and header to the wrapper
+  name.appendChild(document.createTextNode(_this.name));
+  name.classList.add("item__name");
+  nameHidden.setAttribute("type", "hidden");
+  nameHidden.setAttribute("name", "item["+counter+"][name]");
+  nameHidden.setAttribute("value", _this.name);
+  //header.appendChild(name);
+  //header.appendChild(nameHidden);
+  //header.classList.add("item__header");
+  //_this.wrapper.appendChild(header);
+
+  // Give the image a source, alt and title, then append to wrapper
+  img.setAttribute("src", _this.photo);
+  img.setAttribute("alt", _this.name);
+  img.setAttribute("title", _this.name);
+  img.classList.add("item__img");
+  _this.wrapper.appendChild(img);
+
+  // Now add the description
+  desc.appendChild(document.createTextNode(_this.description));
+  desc.classList.add("item__description");
+  _this.wrapper.appendChild(desc);
+
+  // Price and cost are displayed together in boxes
+  // Use poundify function to make them into prices
+  price.appendChild(document.createTextNode(poundify(_this.price)));
+  _this.costView.appendChild(document.createTextNode(poundify(_this.cost)));
+  price.classList.add("item__price");
+  _this.costView.classList.add("item__cost");
+  moneyContainer.classList.add("item__money-container");
+  moneyContainer.appendChild(price);
+  moneyContainer.appendChild(_this.costView);
+  _this.wrapper.appendChild(moneyContainer);
+
+  // These inputs will hold the information to be posted to the php file
+  _this.countHidden.setAttribute("type", "hidden");
+  _this.costHidden.setAttribute("type", "hidden");
+  _this.countHidden.setAttribute("name", "item["+counter+"][count]");
+  _this.costHidden.setAttribute("name", "item["+counter+"][cost]");
+  _this.countHidden.setAttribute("value", _this.count);
+  _this.costHidden.setAttribute("value", _this.cost);
+  _this.wrapper.appendChild(_this.countHidden);
+  _this.wrapper.appendChild(_this.costHidden);
+
+  // Now add + and - buttons, and count display
+  remove.appendChild(document.createTextNode("-"));
+  _this.countView.appendChild(document.createTextNode(_this.count));
+  add.appendChild(document.createTextNode("+"));
+  remove.classList.add("item__remove");
+  remove.classList.add("js-remove");
+  _this.countView.classList.add("item__count");
+  add.classList.add("item__add");
+  add.classList.add("js-add");
+  // Add click event listeners
+  remove.addEventListener("click", _this.removeItem.bind(_this), false);
+  add.addEventListener("click", _this.addItem.bind(_this), false);
+  countContainer.classList.add("item__count-container");
+  countContainer.appendChild(remove);
+  countContainer.appendChild(_this.countView);
+  countContainer.appendChild(add);
+  _this.wrapper.appendChild(countContainer);
+
+  // Finally, add the wrapper to its container
+  container.appendChild(_this.wrapper);
+};
+
+// Create an item object and add it to the shop
+Shop.prototype.addItem = function(element) {
+  this.items.push(new Item(
+      element.name,
+      element.description,
+      element.price,
+      element.photo));
+};
+
+function Shop(filename) {
+  // Allows this keyword to be used in all contexts
+  var _this = this;
+
+  (function init() {
+    // Get the array of items in the JSON file
+    var items = makeXHR(filename, function(s) { return JSON.parse(s); }).items;
+    // Initialise the list of items as an empty array
+    _this.items = [];
+    // Add each element to the shop
+    items.forEach(function (element, index, array) {
+      _this.addItem(element);
+    });
+    // HTML elements for the shop
+    _this.vatView = document.querySelector("input[name=vat]");
+    _this.subtotalView = document.querySelector("input[name=subtotal]");
+    _this.deliveryView = document.querySelector("input[name=delivery]");
+    _this.totalCostView = document.querySelector("input[name=total_cost]");
+  })();
+}
+
+// Print each item in the shop
+Shop.prototype.print = function(container) {
+  var _this = this;
+  _this.items.forEach(function (element, index, array) {
+    element.print(container, index);
+  });
+};
+
+// Although inconsequential, it keeps the code grouped together and scoped
+(function() {
+  // Get the shop element in the document
+  var shopContainer = document.querySelector(".js-shop");
+  // Initiate the shop object
+  var shop = new Shop("FAucG.js");
+  shop.print(shopContainer);
+  setCardTypeListener();
+  addChecks();
+  highlightRequired();
+})();
+
+// Convert amount into pounds
+function poundify(amount) {
+  return  amount.toFixed(2)+" تومان";
+}
+
+// Make HTTP request to a location and run the callback on its response
+function makeXHR(loc, callback) {
+  var req = new XMLHttpRequest();
+  req.open("get", loc, false);
+  req.send();
+  // Return the result of the callback
+  return callback(req.responseText);
+}
+
+function newAnimationObj() {
+  var timeline = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new TimelineMax();
+
+  var obj = {};
+  obj.last = false;
+  obj.start = function () {
+    obj.last = false;
+    timeline.resume();
+  };
+  obj.stop = function () {
+    obj.last = true;
+  };
+  return obj;
+}
+
+var newOilAnimation = function newOilAnimation() {
+  var oilTL = new TimelineMax({ repeat: -1, repeatDelay: 0.3 });
+  var oilObj = newAnimationObj(oilTL);
+  oilTL.to("#myTeardrop", 0.3, {
+    y: 55,
+    ease: Power3.easeIn
+  }).set("#myTeardrop", {
+    y: -53
+  }).to("#myTeardrop", 0.8, {
+    y: -24,
+    ease: Power4.easeIn
+  }).to("#TopInit", 0.8, {
+    morphSVG: { shape: "#TopBulb" },
+    ease: Power4.easeIn
+  }, "-=0.8").to("#TopInit", 0.17, {
+    morphSVG: { shape: "#TopBulbSm" },
+    ease: Power0.easeOut
+  }).to("#TopInit", 0.03, {
+    morphSVG: { shape: "#TopInit" },
+    ease: Power0.easeOut
+  }).to("#TopInit", 0.05, {
+    morphSVG: { shape: "#TopRound" },
+    ease: Power0.easeNone
+  }).to("#TopInit", 0.3, {
+    morphSVG: { shape: "#TopInit" },
+    ease: Bounce.easeOut
+  }).to("#myTeardrop", 1.2, {
+    y: 0,
+    ease: Elastic.easeOut.config(1.2, 0.3),
+    onComplete: function onComplete() {
+      if (oilObj.last == true) oilTL.pause();
+    }
+  }, "-=0.55").invalidate();
+  oilTL.pause();
+  return oilObj;
+};
+
+var newTreeAnimation = function newTreeAnimation() {
+  var treeTL = new TimelineMax({ repeat: -1, repeatDelay: 0.3 });
+  var treeObj = newAnimationObj(treeTL);
+  TweenMax.set("#Axe", { transformOrigin: '50% 50%' });
+  TweenMax.set(["#Branches", "#Trunk", "#topBranches", "#botBranches"], { transformOrigin: '50% 100%' });
+  treeTL.to("#Axe", 0.3, {
+    bezier: {
+      values: [{ x: 0, y: 0 }, { x: 5, y: 37 }, { x: 30, y: 43 }],
+      autoRotate: -90
+    },
+    ease: Power1.easeIn
+  }).to("#Axe", 0.2, {
+    x: -10,
+    ease: Power0.easeNone
+  }).to("#Particle", 0.2, {
+    x: -10,
+    y: 4,
+    ease: Power1.easeIn
+  }, "-=0.2").to("#Branches", 0.05, {
+    rotation: 5,
+    ease: Power0.easeNone
+  }, "-=0.25").to("#Branches", 0.05, {
+    rotation: 0,
+    ease: Power0.easeNone
+  }, "-=0.20").set("#Particle", { autoAlpha: 0 }).set("#Branches", { transformOrigin: '100% 100%' }).to("#Branches", 0.3, {
+    rotation: 90,
+    y: 7,
+    ease: Bounce.easeOut
+  }, "+=0.05").to("#Branches", 0.5, {
+    x: 28,
+    ease: SlowMo.ease.config(0.5, 0.8, false)
+  }, "+=0.1").to("#Trunk", 0.2, {
+    scaleY: 0,
+    ease: SlowMo.ease.config(0.1, 0.7, true)
+  }, "+=0.1").set("#Branches", {
+    x: 0,
+    y: 0,
+    rotation: 0
+  }).set("#topBranches", {
+    scale: 0.1,
+    y: 10
+  }).set("#botBranches", { scale: 0.1 }).to("#botBranches", 0.2, {
+    scale: 1,
+    ease: Power2.easeOut
+  }).to("#topBranches", 0.2, {
+    scale: 1,
+    ease: Power2.easeOut
+  }, "-=0.15").to("#topBranches", 0.25, {
+    y: 0,
+    ease: Back.easeOut.config(3),
+    onComplete: function onComplete() {
+      if (treeObj.last == true) treeTL.pause();
+    }
+  }, "-=0.15").invalidate();
+  treeTL.pause();
+  return treeObj;
+};
+
+var newWaveAnimation = function newWaveAnimation() {
+  var waveTL = new TimelineMax({ repeat: -1, repeatDelay: 0.3 });
+  var waveObj = newAnimationObj(waveTL);
+  var xDur = 2;
+  var dx = 16.5;
+  TweenMax.set("#waveGroup", { transformOrigin: '50% 50%' });
+  waveTL.to("#waveGroup", 0.25, {
+    rotation: -3,
+    ease: Power2.easeOut
+  }).to("#waveGroup", 1.5, {
+    rotation: 0,
+    ease: Elastic.easeOut.config(2, 0.2)
+  }).to("#waveTop", xDur, {
+    x: dx,
+    ease: Power0.easeNone
+  }, "0").to("#waveBot", xDur, {
+    x: -dx,
+    ease: Power0.easeNone,
+    onComplete: function onComplete() {
+      if (waveObj.last == true) waveTL.pause();
+    }
+  }, "0").invalidate();
+  waveTL.pause();
+  return waveObj;
+};
+
+var waveAnimation = newWaveAnimation();
+var treeAnimation = newTreeAnimation();
+var oilAnimation = newOilAnimation();
+
+setTimeout(function () {
+  treeAnimation.start();
+  treeAnimation.stop();
+}, 300);
+
+//TweenMax.globalTimeScale(0.5);
+
+$(document).on("mouseenter touchstart", ".card", function (e) {
+  if (e.currentTarget.classList[1] == "card--water") {
+    waveAnimation.start();
+  }
+  if (e.currentTarget.classList[1] == "card--tree") {
+    treeAnimation.start();
+  }
+  if (e.currentTarget.classList[1] == "card--oil") {
+    oilAnimation.start();
+  }
+});
+
+$(document).on("mouseleave touchend", ".card", function (e) {
+  e.preventDefault();
+  [waveAnimation, treeAnimation, oilAnimation].forEach(function (obj) {
+    obj.stop();
+  });
+});
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuX_phqthxAWW504vTQpRNZAI5VsNWhjU&callback=myMap"></script>
+
+</body>
+
+</html>
