@@ -1180,7 +1180,7 @@ var buy_s = Cookies.get("buy_settings")
 // all fruit price
 
 
-
+$("#all_price tr").remove();
 
 var i="0";
 var apple = $('#pay_apple').text()
@@ -1191,7 +1191,7 @@ var lemon = $('#pay_lemon').text()
 Cookies.set('lemon', lemon);
 var banana = $('#pay_banana').text()
 Cookies.set('banana', banana);
-$("#all_price tr").remove();
+
 
 if(apple!=0){
 	i++;
@@ -1217,7 +1217,7 @@ var many_lemon = $('#pay_many_lemon').text()
 Cookies.set('many_lemon', many_lemon);
 var many_banana = $('#pay_many_banana').text()
 Cookies.set('many_banana', many_banana);
-$("#all_price tr").remove();
+
 
 if(many_apple!=0){
 	i++;
